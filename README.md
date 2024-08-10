@@ -4,7 +4,9 @@ A summary of the tasks involved to access the Memorystore redis cluster from the
 **Supported Document**: 
 
 A. https://cloud.google.com/memorystore/docs/cluster/instance-provisioning-shared-vpc
+
 B. https://cloud.google.com/memorystore/docs/cluster/create-instance-terraform
+
 C. https://cloud.google.com/memorystore/docs/cluster/connect-cluster-instance
 
 
