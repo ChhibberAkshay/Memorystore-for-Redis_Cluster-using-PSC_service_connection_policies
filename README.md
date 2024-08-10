@@ -1,4 +1,4 @@
-A summary of the tasks involved to access the Memorystore redis cluster from the GCE VM in a shared VPC using the service connection policy with the PSC [ private service connect ]
+**Google Cloud Setup** A summary of the tasks involved to access the Memorystore redis cluster from the GCE VM in a shared VPC using the service connection policy with the PSC [ private service connect ]
 
 
 **Supported Document**: 
