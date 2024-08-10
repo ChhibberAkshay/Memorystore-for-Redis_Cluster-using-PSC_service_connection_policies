@@ -10,24 +10,23 @@ B. https://cloud.google.com/memorystore/docs/cluster/create-instance-terraform
 C. https://cloud.google.com/memorystore/docs/cluster/connect-cluster-instance
 
 
-1. Uses an existing Google Cloud project as a Consumer Project.
-   a. In case of XPN[ Shared VPC], it could be a combination of existing **Host/Service** project.
+1. Uses an existing Google Cloud project as a Consumer Project [ combination of existing **Host/Service** projects ].
    
-2. Creates Consumer VPCs (or uses existing).
+2. Creates Consumer VPCs (or uses existing) in **Host** project.
 
-3. Creates subnets in Consumer VPCs (or uses existing).
+3. Creates subnets in Consumer VPCs (or uses existing) **Host** project.
 
-4. Creates a **Service Connection Policy** for Memorystore for Redis Cluster in the VPC project. In case of XPN[ Shared VPC] , this is **Host** project.
+4. Creates a **Service Connection Policy** for Memorystore for Redis Cluster in the VPC **Host** project.
     a. Policy determines where PSC endpoint is created
    
-5. Creates a **Memorystore for Redis cluster** resource in a consumer Service project. In case of XPN[ Shared VPC] , this is **Service** project.
-    a. Service instance for MRC stays in a producer project (LB, VMs)/ Tenant Project.
+5. Creates a **Memorystore for Redis cluster** resource in a consumer **Service** project.
+    a. Service instance for MRC stays in a producer project (LB, VMs)/ **Tenant** project.
    
-6. Create a **GCE instance** in Consumer project to be able to connect to the MRC (service instance).In case of XPN[ Shared VPC] , this is **Service** project.
+6. Create a **GCE instance** in Consumer **Service** project to be able to connect to the MRC (service instance).
     
-7. Create **firewall rules** to allow traffic between consumer GCE instance and MRC (service instance). In case of XPN[ Shared VPC] , this is **Host** project.
+7. Create **firewall rules** to allow traffic between consumer GCE instance and MRC (service instance) in the consumer **Host** project.
     
-8. Deploy **NAT** in the VPC project. In case of XPN[ Shared VPC] , this is **Host** project.
+8. Deploy **NAT** in the consumer VPC **Host** project.
 
 9. **SSH** into the GCE VM and telnet to MRC discovery Endpoint and Port.
 
