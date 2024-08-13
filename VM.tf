@@ -9,4 +9,7 @@ module "simple-vm-example" {
     subnetwork = "projects/${var.project_id}/regions/${var.region}/subnetworks/${var.my_subnets[0].name}"
 
   }]
+  metadata = {
+    startup-script = file("startup-script-for-vm-instances.sh")
+  }
 }

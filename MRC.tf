@@ -11,5 +11,5 @@ module "redis_cluster" {
   redis_configs = {
     maxmemory-policy = "volatile-ttl"
   }
-
+ depends_on = [google_network_connectivity_service_connection_policy.default, module.vpc-host] # Add dependency on the service connection policy default resource as well as the shared vpc in the host project
 }
