@@ -5,7 +5,6 @@ module "vpc-host" {
   subnets         = var.my_subnets
   shared_vpc_host = true
   shared_vpc_service_projects = [
-    #module.service-project.self_link
     var.service_project_id
   ]
 }

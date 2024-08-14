@@ -1,0 +1,20 @@
+#description of all these variables are given in the variables.tf file
+
+project_id         = "your-host-project-name"
+service_project_id = "your-service-project-name"
+host_network       = "mrc"
+my_subnets = [
+  {
+    ip_cidr_range = "10.0.0.0/24"
+    name          = "mrc-subnet-from-host"
+    region        = "us-central1"
+  }
+]
+vm_name       = "src-redis-connect"
+zone          = "us-central1-a"
+region        = "us-central1"
+service_name  = "service-connection-policy"
+location      = "us-central1"
+service_class = "gcp-memorystore-redis"
+redis_cluster = "dst-mrc-redis"
+router_name   = "router-for-mrc"

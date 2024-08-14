@@ -17,4 +17,5 @@ module "cloud_router" {
       }
     ]
   }]
+  depends_on = [module.vpc-host] # Add dependency on the vpc-host module
 }
